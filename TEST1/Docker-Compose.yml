@@ -7,8 +7,8 @@ services:
       - 8080:80
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: nobindb
-      WORDPRESS_DB_PASSWORD: nobinn
+      WORDPRESS_DB_USER: nobinuser
+      WORDPRESS_DB_PASSWORD: nobinpass
       WORDPRESS_DB_NAME: nobindb
     volumes:
       - wordpress:/var/www/html
@@ -18,9 +18,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: nobindb
-      MYSQL_USER: nobinn
-      MYSQL_PASSWORD: nobinn
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      MYSQL_USER: nobinuser
+      MYSQL_PASSWORD: nobinpass
+      MYSQL_ROOT_PASSWORD: 12
     volumes:
       - db:/var/lib/mysql
 
